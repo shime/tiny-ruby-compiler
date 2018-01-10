@@ -4,7 +4,7 @@ Super tiny compiler, written in Ruby, using TDD.
 
 100% covered with tests.
 
-Converts Lisp to C like so:
+Converts Lispy expressions to C-like expressions like so:
 
 | Operation       | Lisp                   | C                      |
 | ----------------| -----------------------|------------------------|
@@ -20,13 +20,21 @@ Compilers generally consist of 3 main parts:
 ## Description
 
 ### Parsing
-Parsing is consisted of two parts:
+Parsing consists of two parts:
 
 * Lexical Analysis - takes raw code and splits it apart into tokens (check out `Tokenizer`)
 * Syntactic Analysis - takes the tokens and reformats them into AST (check out `Parser`)
 
 ### Transformation
+Transformation consists of two parts:
+
+* Traverser - traverseres the original AST and operates on it (check out `Traverser`)
+* Transformer - transforms the original AST to another, suited for destination lanaguage (check out `Transformer`)
+
 ### Code Generation
+
+Code generation consists of:
+* Code Generator - converts the destination AST to runnable destination code (check out `Generator`)
 
 ## Attributions
 
