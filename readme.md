@@ -1,6 +1,6 @@
 # Tiny Ruby Compiler
 
-Super tiny compiler, written in Ruby, using TDD. 
+Super tiny compiler, written in Ruby, using TDD.
 
 100% covered with tests.
 
