@@ -1,4 +1,5 @@
 # Converts tokens to AST.
+#
 #     [
 #       {type: "paren", value: "("},
 #       {type: "name", value: "add"},

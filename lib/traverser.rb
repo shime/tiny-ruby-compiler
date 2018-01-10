@@ -1,3 +1,5 @@
+# Traverses source AST given.
+#
 class Traverser
   class UnrecognizedNodeError < StandardError; end
 

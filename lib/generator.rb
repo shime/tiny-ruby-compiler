@@ -1,3 +1,27 @@
+# Generates destination code from the
+# AST given like this:
+#
+#     {
+#       type: "Program",
+#       body: [{
+#         type: "ExpressionStatement",
+#         expression: {
+#           type: "CallExpression",
+#           callee: {
+#             type: "Identifier",
+#             name: "add"
+#           },
+#           arguments: [{
+#             type: "NumberLiteral",
+#             value: 1
+#           },{
+#             type: "NumberLiteral",
+#             value: 2
+#           }]
+#         }
+#       }]
+#     } => add(1, 2)
+#
 class Generator
   class UnrecognizedNodeError < StandardError; end
 

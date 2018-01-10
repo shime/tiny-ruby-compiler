@@ -1,4 +1,4 @@
-# Converts source code to tokens
+# Converts source code to tokens:
 #
 # (add 1, 2) => [{type: 'paren', value: '('}, ...]
 #

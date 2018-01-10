@@ -1,3 +1,5 @@
+# Converts source AST to destination AST.
+#
 class Hash
   # TODO: stop doing this
   attr_accessor :_context
