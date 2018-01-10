@@ -36,6 +36,19 @@ Transformation consists of two parts:
 Code generation consists of:
 * Code Generator - converts the destination AST to runnable destination code (check out `Generator`)
 
+## Development
+
+Install dependencies
+
+```
+bundle install
+```
+
+Run tests with
+```
+rake
+```
+
 ## Attributions
 
 This repo is basically a port of [thejameskyle/the-super-tiny-compiler](https://github.com/thejameskyle/the-super-tiny-compiler) to Ruby.
