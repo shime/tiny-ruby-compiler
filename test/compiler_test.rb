@@ -1,5 +1,4 @@
-require "minitest/autorun"
-require "minitest/color"
+require_relative "./test_helper"
 require_relative "../lib/compiler"
 
 describe Compiler do
