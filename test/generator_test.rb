@@ -26,10 +26,10 @@ describe Generator do
       }]
     }
 
-    @output = "add(1,2)"
+    @output = "add(1, 2)"
   end
 
-  it "generates #{@output} for #{@input}" do
+  it "generates output for input" do
     @generator.call(@input).must_equal @output
   end
 end

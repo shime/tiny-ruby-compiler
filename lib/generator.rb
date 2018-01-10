@@ -8,7 +8,7 @@ class Generator
     when "ExpressionStatement"
       call(node[:expression])
     when "CallExpression"
-      call(node[:callee]) + "(" + node[:arguments].map {|argument| call(argument)}.join(",") + ")"
+      call(node[:callee]) + "(" + node[:arguments].map {|argument| call(argument)}.join(", ") + ")"
     when "Identifier"
       node[:name]
     when "NumberLiteral"

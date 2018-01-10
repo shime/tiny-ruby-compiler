@@ -86,7 +86,8 @@ class Parser
 
     next_token # skip expression name
 
-    while @current[:type] != "paren"
+    while @current[:type] != "paren" || (@current[:type] == "paren" && 
+        @current[:value] != ")")
       node[:params] << walk
       @current = @input[@index]
     end
