@@ -43,7 +43,7 @@ class Tokenizer
     when LETTER
       process_name
     else
-      fail InvalidCharacterError.new
+      fail InvalidCharacterError.new(@char)
     end
   end
 

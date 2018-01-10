@@ -32,11 +32,7 @@ class Traverser
       traverse_array(node[:params], node)
     when "StringLiteral", "NumberLiteral"
     else
-      fail UnrecognizedNodeError.new
-    end
-
-    if methods && methods[:exit]
-      methods[:exit].call(node, parent)
+      fail UnrecognizedNodeError.new(node[:type])
     end
   end
 end

@@ -40,4 +40,14 @@ describe Traverser do
 
     @count_literal_calls.must_equal 2
   end
+
+  it "raises errors for invalid nodes" do
+    @invalid_traverser = Traverser.new({
+      type: "Moo"
+    }, {})
+
+    assert_raises(Traverser::UnrecognizedNodeError) do
+      @invalid_traverser.call
+    end
+  end
 end

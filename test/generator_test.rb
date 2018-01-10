@@ -31,4 +31,12 @@ describe Generator do
   it "generates output for input" do
     @generator.call(@input).must_equal @output
   end
+
+  it "generates error for invalid input" do
+    assert_raises(Generator::UnrecognizedNodeError) do
+      @generator.call({
+        type: "Mooo"
+      })
+    end
+  end
 end

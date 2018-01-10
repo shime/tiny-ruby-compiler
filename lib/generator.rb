@@ -38,7 +38,7 @@ class Generator
     when "NumberLiteral"
       node[:value]
     when "StringLiteral"
-      '"' + node[:value] + "'"
+      '"' + node[:value] + '"'
     else
       raise UnrecognizedNodeError.new(node[:type])
     end

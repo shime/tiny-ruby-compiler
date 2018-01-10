@@ -7,6 +7,7 @@ describe Compiler do
   end
   {
     "(add 1 2)" => "add(1, 2)",
+    '(subtract "foo" "foobar")' => 'subtract("foo", "foobar")',
     "(add 1 (subtract 4 2))" => "add(1, subtract(4, 2))"
   }.each do |input, output|
     it "converts #{input} to #{output}" do
